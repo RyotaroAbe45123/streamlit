@@ -12,9 +12,9 @@ questions = [
 checked_questions = []
 
 for question in questions:
-    left, middle, right = st.columns(3)
-    left.write("#### " + question)
-    if right.checkbox("#### Yes", key=question):
+    l, r = st.columns([10, 0.1])
+    l.write("#### " + question)
+    if r.checkbox("#### Yes", key=question):
         checked_questions.append(question)
 
 left, middle, right = st.columns(3)

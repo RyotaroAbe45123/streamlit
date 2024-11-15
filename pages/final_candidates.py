@@ -14,5 +14,5 @@ subsidy_candidates = [
 ]
 
 for subsidy in subsidy_candidates:
-    left, middle, right = st.columns(3)
-    left.write("#### " + subsidy)
+    l, r = st.columns([10, 0.1])
+    l.write("#### " + subsidy)

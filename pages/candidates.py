@@ -15,9 +15,10 @@ subsidy_candidates = [
 checked_subsidy_candidates = []
 
 for subsidy in subsidy_candidates:
-    left, middle, right = st.columns(3)
-    left.write("#### " + subsidy)
-    if right.checkbox("", key=subsidy):
+    # 改行位置を調整した。もっと横長にしたい。
+    l, r = st.columns([10, 0.1])
+    l.write("#### " + subsidy)
+    if r.checkbox("", key=subsidy):
         checked_subsidy_candidates.append(subsidy)
 
 left, middle, right = st.columns(3)
